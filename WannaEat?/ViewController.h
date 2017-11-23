@@ -9,6 +9,11 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
+- (IBAction)loginbutton:(id)sender;
+- (IBAction)signupbutton:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UILabel *namelabel;
+@property (weak, nonatomic) IBOutlet UILabel *noaccountlabel;
 
 
 @end

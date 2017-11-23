@@ -15,6 +15,21 @@
 		3653EDB91FC5FFDC0065ED9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDB81FC5FFDC0065ED9F /* main.m */; };
 		3653EDC31FC5FFDC0065ED9F /* WannaEat_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDC21FC5FFDC0065ED9F /* WannaEat_Tests.m */; };
 		3653EDCE1FC5FFDC0065ED9F /* WannaEat_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDCD1FC5FFDC0065ED9F /* WannaEat_UITests.m */; };
+		3684E79C1FC7073500F43636 /* energy-food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3684E79B1FC7073500F43636 /* energy-food.jpg */; };
+		3684E7A51FC708EF00F43636 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7A41FC708EF00F43636 /* SignUpViewController.m */; };
+		3684E7A81FC7097D00F43636 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7A71FC7097D00F43636 /* LogInViewController.m */; };
+		3684E7AB1FC70B3F00F43636 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7AA1FC70B3F00F43636 /* MainViewController.m */; };
+		3684E7AE1FC70B8700F43636 /* recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7AD1FC70B8700F43636 /* recipe.m */; };
+		3684E7B11FC70BD300F43636 /* RecipeCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7B01FC70BD300F43636 /* RecipeCellTableViewCell.m */; };
+		3684E7F21FC7102800F43636 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7E61FC7102200F43636 /* SBJSON.m */; };
+		3684E7F31FC7102800F43636 /* SBJsonBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7E81FC7102300F43636 /* SBJsonBase.m */; };
+		3684E7F41FC7102800F43636 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7EA1FC7102400F43636 /* SBJsonParser.m */; };
+		3684E7F51FC7102800F43636 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7EB1FC7102500F43636 /* SBJsonWriter.m */; };
+		3684E7F61FC7102800F43636 /* NSString+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7ED1FC7102600F43636 /* NSString+SBJSON.m */; };
+		3684E7F71FC7102800F43636 /* NSObject+SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7F01FC7102700F43636 /* NSObject+SBJSON.m */; };
+		3684E7FA1FC7106B00F43636 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7F91FC7106B00F43636 /* MainTableViewController.m */; };
+		3684E81B1FC71C8700F43636 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 3684E81A1FC71C8300F43636 /* restaurant.png */; };
+		3684E8231FC720A600F43636 /* myJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E8211FC720A500F43636 /* myJson.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +66,35 @@
 		3653EDC91FC5FFDC0065ED9F /* WannaEat?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WannaEat?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3653EDCD1FC5FFDC0065ED9F /* WannaEat_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WannaEat_UITests.m; sourceTree = "<group>"; };
 		3653EDCF1FC5FFDC0065ED9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3684E79B1FC7073500F43636 /* energy-food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "energy-food.jpg"; sourceTree = "<group>"; };
+		3684E7A31FC708EF00F43636 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		3684E7A41FC708EF00F43636 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		3684E7A61FC7097D00F43636 /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
+		3684E7A71FC7097D00F43636 /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
+		3684E7A91FC70B3F00F43636 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		3684E7AA1FC70B3F00F43636 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		3684E7AC1FC70B8700F43636 /* recipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recipe.h; sourceTree = "<group>"; };
+		3684E7AD1FC70B8700F43636 /* recipe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = recipe.m; sourceTree = "<group>"; };
+		3684E7AF1FC70BD200F43636 /* RecipeCellTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecipeCellTableViewCell.h; sourceTree = "<group>"; };
+		3684E7B01FC70BD300F43636 /* RecipeCellTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecipeCellTableViewCell.m; sourceTree = "<group>"; };
+		3684E7E51FC7102200F43636 /* NSString+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SBJSON.h"; sourceTree = "<group>"; };
+		3684E7E61FC7102200F43636 /* SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJSON.m; sourceTree = "<group>"; };
+		3684E7E71FC7102300F43636 /* SBJsonBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonBase.h; sourceTree = "<group>"; };
+		3684E7E81FC7102300F43636 /* SBJsonBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonBase.m; sourceTree = "<group>"; };
+		3684E7E91FC7102400F43636 /* NSObject+SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJSON.h"; sourceTree = "<group>"; };
+		3684E7EA1FC7102400F43636 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		3684E7EB1FC7102500F43636 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		3684E7EC1FC7102500F43636 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		3684E7ED1FC7102600F43636 /* NSString+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SBJSON.m"; sourceTree = "<group>"; };
+		3684E7EE1FC7102600F43636 /* SBJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJSON.h; sourceTree = "<group>"; };
+		3684E7EF1FC7102700F43636 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		3684E7F01FC7102700F43636 /* NSObject+SBJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJSON.m"; sourceTree = "<group>"; };
+		3684E7F11FC7102800F43636 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		3684E7F81FC7106B00F43636 /* MainTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainTableViewController.h; sourceTree = "<group>"; };
+		3684E7F91FC7106B00F43636 /* MainTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTableViewController.m; sourceTree = "<group>"; };
+		3684E81A1FC71C8300F43636 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
+		3684E8211FC720A500F43636 /* myJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myJson.m; sourceTree = "<group>"; };
+		3684E8221FC720A600F43636 /* myJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myJson.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,15 +145,31 @@
 		3653EDA81FC5FFDC0065ED9F /* WannaEat? */ = {
 			isa = PBXGroup;
 			children = (
+				3684E8201FC7209900F43636 /* JSON-Url */,
+				3684E7E41FC70FF500F43636 /* JSON */,
 				3653EDA91FC5FFDC0065ED9F /* AppDelegate.h */,
 				3653EDAA1FC5FFDC0065ED9F /* AppDelegate.m */,
 				3653EDAC1FC5FFDC0065ED9F /* ViewController.h */,
 				3653EDAD1FC5FFDC0065ED9F /* ViewController.m */,
+				3684E7A31FC708EF00F43636 /* SignUpViewController.h */,
+				3684E7A61FC7097D00F43636 /* LogInViewController.h */,
+				3684E7A71FC7097D00F43636 /* LogInViewController.m */,
+				3684E7A41FC708EF00F43636 /* SignUpViewController.m */,
 				3653EDAF1FC5FFDC0065ED9F /* Main.storyboard */,
+				3684E7A91FC70B3F00F43636 /* MainViewController.h */,
+				3684E7AA1FC70B3F00F43636 /* MainViewController.m */,
+				3684E7F81FC7106B00F43636 /* MainTableViewController.h */,
+				3684E7F91FC7106B00F43636 /* MainTableViewController.m */,
+				3684E7AC1FC70B8700F43636 /* recipe.h */,
+				3684E7AD1FC70B8700F43636 /* recipe.m */,
+				3684E7AF1FC70BD200F43636 /* RecipeCellTableViewCell.h */,
+				3684E7B01FC70BD300F43636 /* RecipeCellTableViewCell.m */,
 				3653EDB21FC5FFDC0065ED9F /* Assets.xcassets */,
 				3653EDB41FC5FFDC0065ED9F /* LaunchScreen.storyboard */,
 				3653EDB71FC5FFDC0065ED9F /* Info.plist */,
 				3653EDB81FC5FFDC0065ED9F /* main.m */,
+				3684E79B1FC7073500F43636 /* energy-food.jpg */,
+				3684E81A1FC71C8300F43636 /* restaurant.png */,
 			);
 			path = "WannaEat?";
 			sourceTree = "<group>";
@@ -130,6 +190,35 @@
 				3653EDCF1FC5FFDC0065ED9F /* Info.plist */,
 			);
 			path = "WannaEat?UITests";
+			sourceTree = "<group>";
+		};
+		3684E7E41FC70FF500F43636 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				3684E7EC1FC7102500F43636 /* JSON.h */,
+				3684E7E91FC7102400F43636 /* NSObject+SBJSON.h */,
+				3684E7F01FC7102700F43636 /* NSObject+SBJSON.m */,
+				3684E7E51FC7102200F43636 /* NSString+SBJSON.h */,
+				3684E7ED1FC7102600F43636 /* NSString+SBJSON.m */,
+				3684E7EE1FC7102600F43636 /* SBJSON.h */,
+				3684E7E61FC7102200F43636 /* SBJSON.m */,
+				3684E7E71FC7102300F43636 /* SBJsonBase.h */,
+				3684E7E81FC7102300F43636 /* SBJsonBase.m */,
+				3684E7EF1FC7102700F43636 /* SBJsonParser.h */,
+				3684E7EA1FC7102400F43636 /* SBJsonParser.m */,
+				3684E7F11FC7102800F43636 /* SBJsonWriter.h */,
+				3684E7EB1FC7102500F43636 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		3684E8201FC7209900F43636 /* JSON-Url */ = {
+			isa = PBXGroup;
+			children = (
+				3684E8221FC720A600F43636 /* myJson.h */,
+				3684E8211FC720A500F43636 /* myJson.m */,
+			);
+			path = "JSON-Url";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +327,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3684E81B1FC71C8700F43636 /* restaurant.png in Resources */,
 				3653EDB61FC5FFDC0065ED9F /* LaunchScreen.storyboard in Resources */,
+				3684E79C1FC7073500F43636 /* energy-food.jpg in Resources */,
 				3653EDB31FC5FFDC0065ED9F /* Assets.xcassets in Resources */,
 				3653EDB11FC5FFDC0065ED9F /* Main.storyboard in Resources */,
 			);
@@ -265,9 +356,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3684E7F21FC7102800F43636 /* SBJSON.m in Sources */,
+				3684E7F51FC7102800F43636 /* SBJsonWriter.m in Sources */,
 				3653EDAE1FC5FFDC0065ED9F /* ViewController.m in Sources */,
+				3684E7AB1FC70B3F00F43636 /* MainViewController.m in Sources */,
+				3684E7F71FC7102800F43636 /* NSObject+SBJSON.m in Sources */,
 				3653EDB91FC5FFDC0065ED9F /* main.m in Sources */,
+				3684E7F41FC7102800F43636 /* SBJsonParser.m in Sources */,
+				3684E7A81FC7097D00F43636 /* LogInViewController.m in Sources */,
+				3684E7FA1FC7106B00F43636 /* MainTableViewController.m in Sources */,
+				3684E8231FC720A600F43636 /* myJson.m in Sources */,
+				3684E7AE1FC70B8700F43636 /* recipe.m in Sources */,
+				3684E7A51FC708EF00F43636 /* SignUpViewController.m in Sources */,
+				3684E7F31FC7102800F43636 /* SBJsonBase.m in Sources */,
+				3684E7F61FC7102800F43636 /* NSString+SBJSON.m in Sources */,
 				3653EDAB1FC5FFDC0065ED9F /* AppDelegate.m in Sources */,
+				3684E7B11FC70BD300F43636 /* RecipeCellTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
