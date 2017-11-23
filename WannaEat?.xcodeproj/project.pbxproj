@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		3653EDAB1FC5FFDC0065ED9F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDAA1FC5FFDC0065ED9F /* AppDelegate.m */; };
 		3653EDAE1FC5FFDC0065ED9F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDAD1FC5FFDC0065ED9F /* ViewController.m */; };
-		3653EDB11FC5FFDC0065ED9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3653EDAF1FC5FFDC0065ED9F /* Main.storyboard */; };
 		3653EDB31FC5FFDC0065ED9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3653EDB21FC5FFDC0065ED9F /* Assets.xcassets */; };
 		3653EDB61FC5FFDC0065ED9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3653EDB41FC5FFDC0065ED9F /* LaunchScreen.storyboard */; };
 		3653EDB91FC5FFDC0065ED9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDB81FC5FFDC0065ED9F /* main.m */; };
@@ -30,6 +29,7 @@
 		3684E7FA1FC7106B00F43636 /* MainTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7F91FC7106B00F43636 /* MainTableViewController.m */; };
 		3684E81B1FC71C8700F43636 /* restaurant.png in Resources */ = {isa = PBXBuildFile; fileRef = 3684E81A1FC71C8300F43636 /* restaurant.png */; };
 		3684E8231FC720A600F43636 /* myJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E8211FC720A500F43636 /* myJson.m */; };
+		3684E8251FC74E1500F43636 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3684E8241FC74E1400F43636 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,7 +55,6 @@
 		3653EDAA1FC5FFDC0065ED9F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3653EDAC1FC5FFDC0065ED9F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3653EDAD1FC5FFDC0065ED9F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		3653EDB01FC5FFDC0065ED9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3653EDB21FC5FFDC0065ED9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3653EDB51FC5FFDC0065ED9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3653EDB71FC5FFDC0065ED9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -95,6 +94,7 @@
 		3684E81A1FC71C8300F43636 /* restaurant.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = restaurant.png; sourceTree = "<group>"; };
 		3684E8211FC720A500F43636 /* myJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myJson.m; sourceTree = "<group>"; };
 		3684E8221FC720A600F43636 /* myJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myJson.h; sourceTree = "<group>"; };
+		3684E8241FC74E1400F43636 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,13 +149,13 @@
 				3684E7E41FC70FF500F43636 /* JSON */,
 				3653EDA91FC5FFDC0065ED9F /* AppDelegate.h */,
 				3653EDAA1FC5FFDC0065ED9F /* AppDelegate.m */,
+				3684E8241FC74E1400F43636 /* Main.storyboard */,
 				3653EDAC1FC5FFDC0065ED9F /* ViewController.h */,
 				3653EDAD1FC5FFDC0065ED9F /* ViewController.m */,
 				3684E7A31FC708EF00F43636 /* SignUpViewController.h */,
 				3684E7A61FC7097D00F43636 /* LogInViewController.h */,
 				3684E7A71FC7097D00F43636 /* LogInViewController.m */,
 				3684E7A41FC708EF00F43636 /* SignUpViewController.m */,
-				3653EDAF1FC5FFDC0065ED9F /* Main.storyboard */,
 				3684E7A91FC70B3F00F43636 /* MainViewController.h */,
 				3684E7AA1FC70B3F00F43636 /* MainViewController.m */,
 				3684E7F81FC7106B00F43636 /* MainTableViewController.h */,
@@ -328,10 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				3684E81B1FC71C8700F43636 /* restaurant.png in Resources */,
+				3684E8251FC74E1500F43636 /* Main.storyboard in Resources */,
 				3653EDB61FC5FFDC0065ED9F /* LaunchScreen.storyboard in Resources */,
 				3684E79C1FC7073500F43636 /* energy-food.jpg in Resources */,
 				3653EDB31FC5FFDC0065ED9F /* Assets.xcassets in Resources */,
-				3653EDB11FC5FFDC0065ED9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,14 +407,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3653EDAF1FC5FFDC0065ED9F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3653EDB01FC5FFDC0065ED9F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3653EDB41FC5FFDC0065ED9F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

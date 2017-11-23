@@ -21,7 +21,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.recipestitle=[[NSMutableArray alloc]init];
+    self.recipesimage=[[NSMutableArray alloc]init];
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -37,35 +40,42 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)search:(id)sender {
-    NSURLSession *session = [NSURLSession sharedSession];
-    [[session dataTaskWithURL:[NSURL URLWithString:@"http://food2fork.com/api/search?key=6131e7aabf3511307b540284e63641ab&q=shredded%20chicken"]
-            completionHandler:^(NSData *data,
-                                NSURLResponse *response,
-                                NSError *error) {
-                // handle response
-                
-                NSError*e=nil;
-                NSDictionary*bitlyJSON=[NSJSONSerialization JSONObjectWithData:data options:0 error:&e];
-                NSLog(@"results******%@",bitlyJSON);
-                
-                NSArray*recipearray =[bitlyJSON objectForKey:@"recipes"];
-                self.recipes2=[[NSMutableArray alloc]init];
-                for (NSDictionary*dic in recipearray) {
-                    recipe*recipes=[[recipe alloc]init];
-                    recipes.title=[dic objectForKey:@"title"];
-                    recipes.image=[dic objectForKey:@"image_url"];
-                    recipes.recipeid=[dic objectForKey:@"recipe_id"];
+    - (IBAction)search:(id)sender {
+        
+        NSURLSession *session = [NSURLSession sharedSession];
+        [[session dataTaskWithURL:[NSURL URLWithString:@"http://food2fork.com/api/search?key=6131e7aabf3511307b540284e63641ab&q=shredded%20chicken"]
+                completionHandler:^(NSData *data,
+                                    NSURLResponse *response,
+                                    NSError *error) {
+                    // handle response
                     
-                    [_recipes2 addObject:recipes];
-                    NSUserDefaults *defaults =[NSUserDefaults standardUserDefaults];
-                    [defaults setObject:_recipes2 forKey:@"ka"];
-                    [defaults synchronize];
+                    NSError*e=nil;
+                    NSDictionary*bitlyJSON=[NSJSONSerialization JSONObjectWithData:data options:0 error:&e];
+                    //NSLog(@"results******%@",bitlyJSON);
                     
+                    NSArray*recipearray =[bitlyJSON objectForKey:@"recipes"];
                     
-                }
-                
-            }] resume];
+                    for (NSDictionary*dic in recipearray) {
+                        
+                        recipe*allrecipes=[[recipe alloc]init];
+                        allrecipes.title=[dic objectForKey:@"title"];
+                        allrecipes.image=[dic objectForKey:@"image_url"];
+                        allrecipes.recipeid=[dic objectForKey:@"recipe_id"];
+                        
+                        [self.recipestitle addObject:allrecipes.title];
+                        NSUserDefaults*defaults=[NSUserDefaults standardUserDefaults];
+                        [defaults setObject:self.recipestitle forKey:@"ktitle"];
+                        [defaults synchronize];
+                        
+                        [self.recipesimage addObject:allrecipes.image];                       NSUserDefaults*defaults1=[NSUserDefaults standardUserDefaults];
+                        [defaults1 setObject:self.recipesimage forKey:@"kimage"];
+                        [defaults1 synchronize];
+                    
+                    }
+                   // NSLog(@"ssssssssss%@",self.recipesimage);
+                }] resume];
+    
+   
 }
 
 @end

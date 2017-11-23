@@ -7,22 +7,27 @@
 //
 
 #import "MainTableViewController.h"
-#import "recipe.h"
+//#import "recipe.h"
 #import "RecipeCellTableViewCell.h"
-#import "MainViewController.h"
+//#import "MainViewController.h"
 
 @interface MainTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 @end
 
-@implementation MainTableViewController
+@implementation MainTableViewController  
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
+
+   NSUserDefaults*defaults=[NSUserDefaults standardUserDefaults];
+   self.recipestitle =[defaults objectForKey:@"ktitle"];
     
-    NSUserDefaults*defaults=[NSUserDefaults standardUserDefaults];
-    _recipes2 =[defaults objectForKey:@"ka"];
     
-    // Uncomment the following line to preserve selection between presentations.
+   NSUserDefaults*defaults1=[NSUserDefaults standardUserDefaults];
+    self.recipesimage=[defaults1 objectForKey:@"kimage"];
+    NSLog(@"aaaaaaaaaaa %@",self.recipesimage);
+   // // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -40,24 +45,39 @@
 
     return 1;
 }
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    return [_recipes2 count];
+    NSLog(@"how many rows%lu",self.recipestitle.count );
+    return [self.recipestitle count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
-         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    RecipeCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.lineBreakMode =NSLineBreakByWordWrapping;
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.text=[self.recipestitle objectAtIndex:indexPath.row];
     
-    recipe*recipes=[_recipes2 objectAtIndex:indexPath.row ];
+    NSURL *imageURL = [NSURL URLWithString:[self.recipesimage objectAtIndex:indexPath.row]];
+    NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+    UIImage *image = [UIImage imageWithData:imageData];    //[imageData release];
     
-    [cell seDetailsWithRecipe:recipes];
+    
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(64,64), YES, 0);
+    [image drawInRect:CGRectMake(0,0,64,64)];
+    UIImage* im2 = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    cell.imageView.image = im2;
+    cell.imageView.contentMode = UIViewContentModeCenter;
+   
     
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70.0; // edit this return value to your liking
+}
 
 /*
 // Override to support conditional editing of the table view.

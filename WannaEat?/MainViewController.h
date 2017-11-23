@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
-@property(nonatomic,retain)NSMutableArray *recipes2;
+@property(nonatomic,retain)NSMutableArray *recipestitle;
+@property(nonatomic,retain)NSMutableArray *recipesimage;
 - (IBAction)search:(id)sender;
 
 @end
