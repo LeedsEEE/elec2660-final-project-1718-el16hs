@@ -7,8 +7,7 @@
 //
 
 #import "MainTableViewController.h"
-//#import "recipe.h"
-#import "RecipeCellTableViewCell.h"
+
 //#import "MainViewController.h"
 
 @interface MainTableViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -17,16 +16,22 @@
 @implementation MainTableViewController  
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-  
-
-   NSUserDefaults*defaults=[NSUserDefaults standardUserDefaults];
-   self.recipestitle =[defaults objectForKey:@"ktitle"];
+    [super viewDidLoad]; 
+    self.navigationController.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed: @"energy-food.jpg"]];
+    //self.tableView.backgroundColor=[UIColor clearColor];
+    
+    [[NSUserDefaults standardUserDefaults ] synchronize];
+     NSUserDefaults*defaults=[NSUserDefaults standardUserDefaults];
+     self.recipestitle =[defaults objectForKey:@"ktitle"];
     
     
    NSUserDefaults*defaults1=[NSUserDefaults standardUserDefaults];
-    self.recipesimage=[defaults1 objectForKey:@"kimage"];
-    NSLog(@"aaaaaaaaaaa %@",self.recipesimage);
+  self.recipesimage=[defaults1 objectForKey:@"kimage"];
+
+    
+   NSUserDefaults*defaults2=[NSUserDefaults standardUserDefaults];
+   self.fullrecipe =[defaults2 objectForKey:@"krecipe"];
+    
    // // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -53,6 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
     cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.lineBreakMode =NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;
@@ -78,6 +84,7 @@
 {
     return 70.0; // edit this return value to your liking
 }
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -113,14 +120,53 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        FullRecipeViewController*destViewController = segue.destinationViewController;
+        destViewController.fullrecipeid = [self.fullrecipe objectAtIndex:indexPath.row];
+    
+    NSString *str = @"http://food2fork.com/api/get?key=6131e7aabf3511307b540284e63641ab&rId=";
+    str = [str stringByAppendingString:[self.fullrecipe objectAtIndex:indexPath.row]];
+    
+        NSError *error;
+        NSString *url_string = [NSString stringWithFormat:str];
+        NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
+        NSDictionary *bitlyJSON1= [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+      
+        
+        NSDictionary *myresponse=[bitlyJSON1 objectForKey:@"recipe"];
+       
+        destViewController.fullrecipetitle=[myresponse objectForKey:@"title"];
+        destViewController.fullrecipeimage=[myresponse objectForKey:@"image_url"];
+        
+        NSDictionary *myresponse2=[myresponse objectForKey:@"ingredients"];
+        
+        NSString *contenttext = @"";
+        for (NSDictionary *item in myresponse2){
+            
+            contenttext= [contenttext stringByAppendingString:[NSString stringWithFormat:@"%@", item]];
+            contenttext= [contenttext stringByAppendingString:[NSString stringWithFormat:@"%s", "\n"]];
+        }
+        destViewController.fullrecipedetails=contenttext;
+        NSURL *imageURL = [NSURL URLWithString:[self.recipesimage objectAtIndex:indexPath.row]];
+        NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+        UIImage *image = [UIImage imageWithData:imageData];//[imageData release];
+        UIGraphicsBeginImageContextWithOptions(CGSizeMake(250,200), YES, 0);
+        [image drawInRect:CGRectMake(0,0,250,200)];
+        UIImage* im3 = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        destViewController.fullrecipeimage=im3;
+        
+  
+
 }
-*/
+}
 
 @end

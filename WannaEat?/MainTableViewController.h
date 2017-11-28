@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import "recipe.h"
-#import "RecipeCellTableViewCell.h"
+
+
+#import "FullRecipeViewController.h"
 @interface MainTableViewController : UITableViewController
 @property(nonatomic,retain)NSMutableArray *recipestitle;
 @property(nonatomic,retain)NSMutableArray *recipesimage;
-
+@property(nonatomic,retain)NSMutableArray*fullrecipe;
 
 @end

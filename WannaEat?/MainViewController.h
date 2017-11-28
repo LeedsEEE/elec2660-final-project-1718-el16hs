@@ -12,5 +12,8 @@
 @property(nonatomic,retain)NSMutableArray *recipestitle;
 @property(nonatomic,retain)NSMutableArray *recipesimage;
 - (IBAction)search:(id)sender;
-
+- (IBAction)ifeellucky:(id)sender;
+@property(nonatomic,retain)NSMutableArray*fullrecipe;
+//@property(weak,nonatomic)IBOutlet UITextView*searchbox;
+@property(weak,nonatomic)IBOutlet UITextField*searchbox;
 @end

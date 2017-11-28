@@ -262,10 +262,10 @@
             </objects>
             <point key="canvasLocation" x="1800.0000000000002" y="-699.45652173913049"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Full Recipe View Controller-->
         <scene sceneID="KLJ-aF-esR">
             <objects>
-                <viewController id="cNr-iK-Jie" customClass="MainViewController" sceneMemberID="viewController">
+                <viewController id="cNr-iK-Jie" customClass="FullRecipeViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fM7-gP-rI3"/>
                         <viewControllerLayoutGuide type="bottom" id="u9e-nS-szW"/>
@@ -274,32 +274,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kf3-Tz-g7s">
-                                <rect key="frame" x="20" y="103" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ttile2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZj-NO-GVU">
-                                <rect key="frame" x="34" y="74" width="39" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title2" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jub-Bb-THa">
+                                <rect key="frame" x="20" y="72" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="recipeidd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZj-NO-GVU">
+                                <rect key="frame" x="20" y="106" width="53" height="14.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Content" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6d-0B-V73">
-                                <rect key="frame" x="34" y="265" width="343" height="211"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sQ3-sU-HM1">
+                                <rect key="frame" x="20" y="141" width="240" height="151"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="recipedetails" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLx-WG-iSs">
+                                <rect key="frame" x="34" y="321" width="346" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.70720944573535471" blue="0.47052637468537895" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Jub-Bb-THa" firstAttribute="top" secondItem="fM7-gP-rI3" secondAttribute="bottom" constant="8" id="GgY-Gf-Dh9"/>
+                            <constraint firstItem="sQ3-sU-HM1" firstAttribute="leading" secondItem="pqq-7E-CKs" secondAttribute="leading" constant="20" id="Izj-y1-DCt"/>
+                            <constraint firstAttribute="trailing" secondItem="XLx-WG-iSs" secondAttribute="trailing" constant="34" id="J1e-QD-izL"/>
+                            <constraint firstItem="XLx-WG-iSs" firstAttribute="leading" secondItem="pqq-7E-CKs" secondAttribute="leading" constant="34" id="Nxf-ir-urr"/>
+                            <constraint firstAttribute="trailing" secondItem="Jub-Bb-THa" secondAttribute="trailing" constant="20" id="OZ6-iG-1Tc"/>
+                            <constraint firstItem="sQ3-sU-HM1" firstAttribute="top" secondItem="BZj-NO-GVU" secondAttribute="bottom" constant="10" id="PV5-UB-a0w"/>
+                            <constraint firstItem="Jub-Bb-THa" firstAttribute="leading" secondItem="pqq-7E-CKs" secondAttribute="leading" constant="20" id="dUO-v8-xNy"/>
+                            <constraint firstItem="BZj-NO-GVU" firstAttribute="leading" secondItem="pqq-7E-CKs" secondAttribute="leading" constant="20" id="gW8-oH-gQd"/>
+                            <constraint firstItem="BZj-NO-GVU" firstAttribute="top" secondItem="Jub-Bb-THa" secondAttribute="bottom" constant="10" id="gbK-3v-5pu"/>
+                            <constraint firstItem="XLx-WG-iSs" firstAttribute="top" secondItem="sQ3-sU-HM1" secondAttribute="bottom" constant="20" id="kJK-SL-idu"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Fr8-KW-LWz"/>
+                    <connections>
+                        <outlet property="image2" destination="sQ3-sU-HM1" id="Mfj-1z-jJ5"/>
+                        <outlet property="recipedetails" destination="XLx-WG-iSs" id="bPR-U6-gSL"/>
+                        <outlet property="recipeidd" destination="BZj-NO-GVU" id="E62-hs-IHQ"/>
+                        <outlet property="title2" destination="Jub-Bb-THa" id="dLT-yX-A8X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LC3-3c-U6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5143.4782608695659" y="531.52173913043487"/>
+            <point key="canvasLocation" x="3869.5652173913045" y="1328.804347826087"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="6iq-Op-uUh">
@@ -415,14 +436,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="energy-food.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2i9-pw-727">
-                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="energy-food.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="2i9-pw-727">
+                                <rect key="frame" x="0.0" y="180" width="414" height="507"/>
                             </imageView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="END-ll-ONx">
-                                <rect key="frame" x="0.0" y="75" width="414" height="216"/>
-                            </pickerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANj-fz-tuY">
-                                <rect key="frame" x="159" y="331" width="96" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ANj-fz-tuY">
+                                <rect key="frame" x="159" y="-82531" width="96" height="35"/>
                                 <color key="backgroundColor" red="1" green="0.62425162290000002" blue="0.76271779790000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <state key="normal" title="Search">
@@ -433,28 +451,46 @@
                                     <segue destination="y6s-pF-jXR" kind="show" id="ZoW-0j-gsA"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ingredient(s)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwk-Js-fVO">
+                                <rect key="frame" x="20" y="142" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wJ-3D-Zzs">
+                                <rect key="frame" x="128" y="374" width="165" height="30"/>
+                                <color key="backgroundColor" red="0.32953678809278841" green="1" blue="0.11110971914734757" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="i feel lucky">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="ifeellucky:" destination="JK1-Z8-ygp" eventType="touchUpInside" id="kcM-FL-uhO"/>
+                                    <segue destination="cNr-iK-Jie" kind="show" identifier="segue2" id="f7M-df-eyw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="ANj-fz-tuY" firstAttribute="centerX" secondItem="14y-DD-LT9" secondAttribute="centerX" id="0hb-qW-L4S"/>
-                            <constraint firstItem="END-ll-ONx" firstAttribute="leading" secondItem="14y-DD-LT9" secondAttribute="leading" id="2q6-FU-mOv"/>
-                            <constraint firstItem="ANj-fz-tuY" firstAttribute="top" secondItem="END-ll-ONx" secondAttribute="bottom" id="7Jd-ii-uCN"/>
-                            <constraint firstItem="END-ll-ONx" firstAttribute="top" secondItem="m2Q-fm-Szk" secondAttribute="bottom" constant="11" id="F90-Q0-Yl9"/>
+                            <constraint firstAttribute="trailing" secondItem="7wJ-3D-Zzs" secondAttribute="trailing" constant="121" id="2wO-7d-9Wo"/>
                             <constraint firstItem="2i9-pw-727" firstAttribute="top" secondItem="m2Q-fm-Szk" secondAttribute="bottom" id="Ihd-jc-vBs"/>
+                            <constraint firstItem="ANj-fz-tuY" firstAttribute="top" secondItem="mwk-Js-fVO" secondAttribute="bottom" constant="159" id="MA0-TD-nc1"/>
+                            <constraint firstItem="mwk-Js-fVO" firstAttribute="top" secondItem="m2Q-fm-Szk" secondAttribute="bottom" constant="78" id="OXV-Uh-qHN"/>
                             <constraint firstItem="2i9-pw-727" firstAttribute="leading" secondItem="14y-DD-LT9" secondAttribute="leading" id="Pt5-FL-pB1"/>
                             <constraint firstItem="Hip-T4-wVp" firstAttribute="top" secondItem="2i9-pw-727" secondAttribute="bottom" id="Soq-Ui-mis"/>
-                            <constraint firstItem="ANj-fz-tuY" firstAttribute="top" secondItem="END-ll-ONx" secondAttribute="bottom" constant="40" id="XNL-0J-nER"/>
+                            <constraint firstItem="7wJ-3D-Zzs" firstAttribute="top" secondItem="ANj-fz-tuY" secondAttribute="bottom" constant="8" id="eKA-Z5-cFL"/>
+                            <constraint firstItem="7wJ-3D-Zzs" firstAttribute="leading" secondItem="14y-DD-LT9" secondAttribute="leading" constant="128" id="elL-cD-vkY"/>
                             <constraint firstAttribute="trailing" secondItem="2i9-pw-727" secondAttribute="trailing" id="jZX-az-MVa"/>
-                            <constraint firstAttribute="trailing" secondItem="END-ll-ONx" secondAttribute="trailing" id="m6S-JP-Z0T"/>
                             <constraint firstItem="ANj-fz-tuY" firstAttribute="leading" secondItem="14y-DD-LT9" secondAttribute="leading" constant="159" id="uEy-YV-BtC"/>
+                            <constraint firstAttribute="trailing" secondItem="mwk-Js-fVO" secondAttribute="trailing" constant="20" id="ujM-fJ-P2g"/>
+                            <constraint firstItem="mwk-Js-fVO" firstAttribute="leading" secondItem="14y-DD-LT9" secondAttribute="leading" constant="20" id="xD7-Jg-Xgl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="7Jd-ii-uCN"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="Yab-zv-Acl"/>
+                    <connections>
+                        <outlet property="searchbox" destination="mwk-Js-fVO" id="2cC-4C-Fjv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hzz-wq-YpN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -483,7 +519,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="cNr-iK-Jie" kind="show" id="2oI-WI-55G"/>
+                                    <segue destination="cNr-iK-Jie" kind="show" identifier="showRecipeDetail" id="bA3-bo-8Cp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -523,6 +559,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="5Cl-FD-JQB"/>
+        <segue reference="bA3-bo-8Cp"/>
         <segue reference="clp-D1-Srn"/>
     </inferredMetricsTieBreakers>
 </document>
