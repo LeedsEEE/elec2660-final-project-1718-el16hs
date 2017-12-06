@@ -25,10 +25,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)loginbutton:(id)sender {
-}
 
-- (IBAction)signupbutton:(id)sender {
-}
 
 @end

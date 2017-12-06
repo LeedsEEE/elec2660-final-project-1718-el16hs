@@ -20,29 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    //using the defaults again we can recall the source url so that we browse the method that the recipe is cooked.
     NSUserDefaults *defaults4=[NSUserDefaults standardUserDefaults];
    self.directions=[defaults4 objectForKey:@"kmethod"];
     
     self.productURL =self.directions;
-    //NSLog(@"FFFFF%@",self.productURL);
-    
-    
-    NSURL *url = [NSURL URLWithString:self.productURL];
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    
-    _webView = [[WKWebView alloc]init] ; 
-    
+  NSURL *url = [NSURL URLWithString:self.productURL];
+  NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    _webView = [[WKWebView alloc]init] ;
     _webView.UIDelegate = self;
-    
     _webView.navigationDelegate = self;
-    
     [_webView loadRequest:request];
-    
-    _webView.frame = CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height); 
-
-    
+    _webView.frame = CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height);
     [self.view addSubview:_webView];
 }
 

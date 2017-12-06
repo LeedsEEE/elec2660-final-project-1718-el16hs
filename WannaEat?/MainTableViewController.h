@@ -11,6 +11,7 @@
 
 #import "FullRecipeViewController.h"
 @interface MainTableViewController : UITableViewController
+//we recreate the arrays we used in the previous view controller.
 @property(nonatomic,retain)NSMutableArray *recipestitle;
 @property(nonatomic,retain)NSMutableArray *recipesimage;
 @property(nonatomic,retain)NSMutableArray*fullrecipe;

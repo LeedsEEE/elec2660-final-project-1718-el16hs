@@ -17,14 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
-    // self.recipeidd.text=_recipes.recipeid;
-    
+    //now we can display the data:
     _recipeidd.text = _fullrecipeid;
-    
     _recipedetails.text= _fullrecipedetails;
-    
     _title2.text=_fullrecipetitle;
     _image2.image=_fullrecipeimage;
     

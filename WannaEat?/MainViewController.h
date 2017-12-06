@@ -9,12 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface MainViewController : UIViewController
+
+//we need arrays in which we can store the titles,images,ids and details of the recipes.
 @property(nonatomic,retain)NSMutableArray *recipestitle;
 @property(nonatomic,retain)NSMutableArray *recipesimage;
-- (IBAction)search:(id)sender;
-- (IBAction)ifeellucky:(id)sender;
 @property(nonatomic,retain)NSMutableArray*fullrecipe;
 @property(nonatomic,retain)NSMutableArray*directions;
-//@property(weak,nonatomic)IBOutlet UITextView*searchbox;
+//this is the textbox where i can type the ingredients.
 @property(weak,nonatomic)IBOutlet UITextField*searchbox;
+
+- (IBAction)search:(id)sender;
+- (IBAction)ifeellucky:(id)sender;
 @end

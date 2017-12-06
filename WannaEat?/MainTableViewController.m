@@ -18,23 +18,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad]; 
     self.navigationController.view.backgroundColor=[UIColor colorWithPatternImage:[UIImage imageNamed: @"energy-food.jpg"]];
-    //self.tableView.backgroundColor=[UIColor clearColor];
     
+    //here we fill the new arrays with data saved in defaults in the previous view controller.
     [[NSUserDefaults standardUserDefaults ] synchronize];
+    
      NSUserDefaults*defaults=[NSUserDefaults standardUserDefaults];
      self.recipestitle =[defaults objectForKey:@"ktitle"];
     
     
-   NSUserDefaults*defaults1=[NSUserDefaults standardUserDefaults];
-  self.recipesimage=[defaults1 objectForKey:@"kimage"];
+    NSUserDefaults*defaults1=[NSUserDefaults standardUserDefaults];
+    self.recipesimage=[defaults1 objectForKey:@"kimage"];
 
     
-   NSUserDefaults*defaults2=[NSUserDefaults standardUserDefaults];
-   self.fullrecipe =[defaults2 objectForKey:@"krecipe"];
+    NSUserDefaults*defaults2=[NSUserDefaults standardUserDefaults];
+    self.fullrecipe =[defaults2 objectForKey:@"krecipe"];
     
     
     NSUserDefaults*defaults3=[NSUserDefaults standardUserDefaults];
     self.directions =[defaults3 objectForKey:@"kdirections"];
+    
    // // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -51,28 +53,27 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
-    return 1;
+    return 1;//we only need one section
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     NSLog(@"how many rows%lu",self.recipestitle.count );
-    return [self.recipestitle count];
+    return [self.recipestitle count];//here the rows are specified by the number of recipes found.
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
     cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-   
+   //here is the code for the displaying recipes.
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.lineBreakMode =NSLineBreakByWordWrapping;
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.text=[self.recipestitle objectAtIndex:indexPath.row];
     
+    //the corresponding images of each recipes next to the title of the recipe in the cell.
     NSURL *imageURL = [NSURL URLWithString:[self.recipesimage objectAtIndex:indexPath.row]];
     NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
     UIImage *image = [UIImage imageWithData:imageData];    //[imageData release];
-    
-    
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(64,64), YES, 0);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(64,64), YES, 0);//we need to resize the image so that it fit in the cell.
     [image drawInRect:CGRectMake(0,0,64,64)];
     UIImage* im2 = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -131,6 +132,9 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     if ([segue.identifier isEqualToString:@"showRecipeDetail"]) {
+        //here we will use the code written for a random recipe,but slightly different this time.
+        //we need to pass the information of the chosen recipe in the cell to the other view controller,but this time for the specific recipeid. Recipeid correpsonds to a number which is unique for each recipe. So now it's easier for us to pass the data for the specific recipe,using this id.
+        
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         FullRecipeViewController*destViewController = segue.destinationViewController;
         destViewController.fullrecipeid = [self.fullrecipe objectAtIndex:indexPath.row];
@@ -168,8 +172,6 @@
         destViewController.fullrecipeimage=im3;
         
         destViewController.recipedirections=[self.directions objectAtIndex:indexPath.row];
-       // NSLog(@"aaaaaa%@",destViewController.recipedirections);
-        
         NSUserDefaults *defaults4=[NSUserDefaults standardUserDefaults];
         [defaults4 setObject: destViewController.recipedirections forKey:@"kmethod"];
         [defaults4 synchronize];
