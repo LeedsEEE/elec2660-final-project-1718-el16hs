@@ -25,6 +25,7 @@
     self.recipestitle=[[NSMutableArray alloc]init];
     self.recipesimage=[[NSMutableArray alloc]init];
     self.fullrecipe=[[NSMutableArray alloc]init];
+    self.directions=[[NSMutableArray alloc]init];
 }
 
 
@@ -32,7 +33,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 #pragma mark - Navigation
 
@@ -74,6 +74,13 @@
           destViewController.fullrecipedetails=contenttext;
           destViewController.fullrecipeid=[NSString stringWithFormat:@"%d", r];
           destViewController.fullrecipeimage=im3;
+          
+          destViewController.recipedirections=[myresponse objectForKey:@"source_url"];
+         // NSLog(@"aaaaaa%@",destViewController.recipedirections);
+          
+          NSUserDefaults *defaults4=[NSUserDefaults standardUserDefaults];
+          [defaults4 setObject: destViewController.recipedirections forKey:@"kmethod"];
+          [defaults4 synchronize];
 }
 }
 
@@ -96,6 +103,7 @@
                     NSUserDefaults *defaults=[NSUserDefaults standardUserDefaults];
                     NSUserDefaults *defaults1=[NSUserDefaults standardUserDefaults];
                     NSUserDefaults *defaults2=[NSUserDefaults standardUserDefaults];
+          NSUserDefaults *defaults3=[NSUserDefaults standardUserDefaults];
                    
                     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"ktitle"];
                     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -106,7 +114,10 @@
                     [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"krecipe"];
                     [[NSUserDefaults standardUserDefaults] synchronize];
                     [self.fullrecipe removeAllObjects];
-                    
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"ktitle"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [self.directions removeAllObjects];
+        
                     for (NSDictionary*dic in recipearray) {
                         
                         [self.recipestitle addObject:[dic objectForKey:@"title"]];
@@ -120,6 +131,10 @@
                         [self.fullrecipe addObject:[dic objectForKey:@"recipe_id"]];
                         [defaults2 setObject:self.fullrecipe forKey:@"krecipe"];
                         [defaults2 synchronize];
+                        
+                        [self.directions addObject:[dic objectForKey:@"source_url"]];
+                        [defaults3 setObject:self.directions forKey:@"kdirections"];
+                        [defaults3 synchronize];
                         
                     }
                    

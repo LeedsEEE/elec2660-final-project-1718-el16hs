@@ -14,5 +14,5 @@
 @property(nonatomic,retain)NSMutableArray *recipestitle;
 @property(nonatomic,retain)NSMutableArray *recipesimage;
 @property(nonatomic,retain)NSMutableArray*fullrecipe;
-
+@property(nonatomic,retain)NSMutableArray*directions;
 @end

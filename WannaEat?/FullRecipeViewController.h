@@ -14,10 +14,11 @@
 @property(weak,nonatomic)IBOutlet UILabel *recipedetails;
 @property(weak,nonatomic)IBOutlet UIImageView *image2;
 @property(weak,nonatomic)IBOutlet UILabel *title2;
-//@property(nonatomic,retain)recipe*allrecipes;
+
+
 @property(nonatomic,retain)NSString*fullrecipeid;
 @property(nonatomic,retain)NSString*fullrecipedetails;
 @property(nonatomic,retain)NSString*fullrecipetitle;
 @property(nonatomic,retain)NSString*fullrecipeimage;
-
+@property(nonatomic,retain)NSString*recipedirections;
 @end

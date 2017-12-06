@@ -32,6 +32,9 @@
    NSUserDefaults*defaults2=[NSUserDefaults standardUserDefaults];
    self.fullrecipe =[defaults2 objectForKey:@"krecipe"];
     
+    
+    NSUserDefaults*defaults3=[NSUserDefaults standardUserDefaults];
+    self.directions =[defaults3 objectForKey:@"kdirections"];
    // // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -164,7 +167,12 @@
         UIGraphicsEndImageContext();
         destViewController.fullrecipeimage=im3;
         
-  
+        destViewController.recipedirections=[self.directions objectAtIndex:indexPath.row];
+       // NSLog(@"aaaaaa%@",destViewController.recipedirections);
+        
+        NSUserDefaults *defaults4=[NSUserDefaults standardUserDefaults];
+        [defaults4 setObject: destViewController.recipedirections forKey:@"kmethod"];
+        [defaults4 synchronize];
 
 }
 }

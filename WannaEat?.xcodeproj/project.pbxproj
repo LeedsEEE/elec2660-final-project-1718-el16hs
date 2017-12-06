@@ -14,10 +14,10 @@
 		3653EDB91FC5FFDC0065ED9F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDB81FC5FFDC0065ED9F /* main.m */; };
 		3653EDC31FC5FFDC0065ED9F /* WannaEat_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDC21FC5FFDC0065ED9F /* WannaEat_Tests.m */; };
 		3653EDCE1FC5FFDC0065ED9F /* WannaEat_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDCD1FC5FFDC0065ED9F /* WannaEat_UITests.m */; };
+		365D52061FD803E500D458CA /* MethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365D52051FD803E500D458CA /* MethodViewController.m */; };
+		365D52091FD8048A00D458CA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365D52081FD8047300D458CA /* WebKit.framework */; };
 		3661D5921FCC1F8D00DF413C /* FullRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3661D5911FCC1F8D00DF413C /* FullRecipeViewController.m */; };
 		3684E79C1FC7073500F43636 /* energy-food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3684E79B1FC7073500F43636 /* energy-food.jpg */; };
-		3684E7A51FC708EF00F43636 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7A41FC708EF00F43636 /* SignUpViewController.m */; };
-		3684E7A81FC7097D00F43636 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7A71FC7097D00F43636 /* LogInViewController.m */; };
 		3684E7AB1FC70B3F00F43636 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7AA1FC70B3F00F43636 /* MainViewController.m */; };
 		3684E7AE1FC70B8700F43636 /* recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7AD1FC70B8700F43636 /* recipe.m */; };
 		3684E7F21FC7102800F43636 /* SBJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7E61FC7102200F43636 /* SBJSON.m */; };
@@ -65,13 +65,12 @@
 		3653EDC91FC5FFDC0065ED9F /* WannaEat?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WannaEat?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3653EDCD1FC5FFDC0065ED9F /* WannaEat_UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WannaEat_UITests.m; sourceTree = "<group>"; };
 		3653EDCF1FC5FFDC0065ED9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		365D52041FD803E500D458CA /* MethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodViewController.h; sourceTree = "<group>"; };
+		365D52051FD803E500D458CA /* MethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodViewController.m; sourceTree = "<group>"; };
+		365D52081FD8047300D458CA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		3661D5901FCC1F8D00DF413C /* FullRecipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullRecipeViewController.h; sourceTree = "<group>"; };
 		3661D5911FCC1F8D00DF413C /* FullRecipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullRecipeViewController.m; sourceTree = "<group>"; };
 		3684E79B1FC7073500F43636 /* energy-food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "energy-food.jpg"; sourceTree = "<group>"; };
-		3684E7A31FC708EF00F43636 /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
-		3684E7A41FC708EF00F43636 /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
-		3684E7A61FC7097D00F43636 /* LogInViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
-		3684E7A71FC7097D00F43636 /* LogInViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		3684E7A91FC70B3F00F43636 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		3684E7AA1FC70B3F00F43636 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		3684E7AC1FC70B8700F43636 /* recipe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = recipe.h; sourceTree = "<group>"; };
@@ -102,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				365D52091FD8048A00D458CA /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +129,7 @@
 				3653EDC11FC5FFDC0065ED9F /* WannaEat?Tests */,
 				3653EDCC1FC5FFDC0065ED9F /* WannaEat?UITests */,
 				3653EDA71FC5FFDC0065ED9F /* Products */,
+				365D52071FD8047200D458CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -152,13 +153,11 @@
 				3684E8241FC74E1400F43636 /* Main.storyboard */,
 				3653EDAC1FC5FFDC0065ED9F /* ViewController.h */,
 				3653EDAD1FC5FFDC0065ED9F /* ViewController.m */,
-				3684E7A31FC708EF00F43636 /* SignUpViewController.h */,
-				3684E7A61FC7097D00F43636 /* LogInViewController.h */,
-				3684E7A71FC7097D00F43636 /* LogInViewController.m */,
-				3684E7A41FC708EF00F43636 /* SignUpViewController.m */,
 				3684E7A91FC70B3F00F43636 /* MainViewController.h */,
 				3661D5901FCC1F8D00DF413C /* FullRecipeViewController.h */,
 				3661D5911FCC1F8D00DF413C /* FullRecipeViewController.m */,
+				365D52041FD803E500D458CA /* MethodViewController.h */,
+				365D52051FD803E500D458CA /* MethodViewController.m */,
 				3684E7AA1FC70B3F00F43636 /* MainViewController.m */,
 				3684E7F81FC7106B00F43636 /* MainTableViewController.h */,
 				3684E7F91FC7106B00F43636 /* MainTableViewController.m */,
@@ -190,6 +189,14 @@
 				3653EDCF1FC5FFDC0065ED9F /* Info.plist */,
 			);
 			path = "WannaEat?UITests";
+			sourceTree = "<group>";
+		};
+		365D52071FD8047200D458CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				365D52081FD8047300D458CA /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3684E7E41FC70FF500F43636 /* JSON */ = {
@@ -364,11 +371,10 @@
 				3684E7F71FC7102800F43636 /* NSObject+SBJSON.m in Sources */,
 				3653EDB91FC5FFDC0065ED9F /* main.m in Sources */,
 				3684E7F41FC7102800F43636 /* SBJsonParser.m in Sources */,
-				3684E7A81FC7097D00F43636 /* LogInViewController.m in Sources */,
 				3684E7FA1FC7106B00F43636 /* MainTableViewController.m in Sources */,
 				3684E8231FC720A600F43636 /* myJson.m in Sources */,
 				3684E7AE1FC70B8700F43636 /* recipe.m in Sources */,
-				3684E7A51FC708EF00F43636 /* SignUpViewController.m in Sources */,
+				365D52061FD803E500D458CA /* MethodViewController.m in Sources */,
 				3684E7F31FC7102800F43636 /* SBJsonBase.m in Sources */,
 				3684E7F61FC7102800F43636 /* NSString+SBJSON.m in Sources */,
 				3653EDAB1FC5FFDC0065ED9F /* AppDelegate.m in Sources */,
@@ -527,6 +533,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "WannaEat?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "University-of-Leeds.WannaEat-";
@@ -540,6 +547,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "WannaEat?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "University-of-Leeds.WannaEat-";

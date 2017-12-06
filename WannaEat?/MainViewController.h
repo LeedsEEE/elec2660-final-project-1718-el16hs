@@ -14,6 +14,7 @@
 - (IBAction)search:(id)sender;
 - (IBAction)ifeellucky:(id)sender;
 @property(nonatomic,retain)NSMutableArray*fullrecipe;
+@property(nonatomic,retain)NSMutableArray*directions;
 //@property(weak,nonatomic)IBOutlet UITextView*searchbox;
 @property(weak,nonatomic)IBOutlet UITextField*searchbox;
 @end
