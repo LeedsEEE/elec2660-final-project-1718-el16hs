@@ -22,7 +22,7 @@
     _recipedetails.text= _fullrecipedetails;
     _title2.text=_fullrecipetitle;
     _image2.image=_fullrecipeimage;
-    
+  
 }
 
     

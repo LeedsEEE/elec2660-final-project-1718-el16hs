@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <UITextFieldDelegate>
 
 //we need arrays in which we can store the titles,images,ids and details of the recipes.
 @property(nonatomic,retain)NSMutableArray *recipestitle;

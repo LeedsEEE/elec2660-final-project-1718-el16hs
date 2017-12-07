@@ -26,6 +26,9 @@
     self.recipesimage=[[NSMutableArray alloc]init];
     self.fullrecipe=[[NSMutableArray alloc]init];
     self.directions=[[NSMutableArray alloc]init];
+    _searchbox.delegate=self; //delegate method for the searchbox
+    
+    
 }
 
 
@@ -49,7 +52,7 @@
     int r = 35000+arc4random() % 1000;
     str = [str stringByAppendingString:[NSString stringWithFormat:@"%d", r]];
     
-    //in order to get the information we need from the API address, we need to pass the link through a JSON parse.
+    //in order to get the information we need from the API address, we need to pass the link through a JSON parser.
     NSError *error;
     NSString *url_string = [NSString stringWithFormat:str];
     NSData *data = [NSData dataWithContentsOfURL: [NSURL URLWithString:url_string]];
@@ -144,6 +147,16 @@
 }
    
 -(IBAction)ifeellucky:(id)sender{
+}
+//now we need to hide the keyboard when we click on return
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField resignFirstResponder];
 }
 
 @end
