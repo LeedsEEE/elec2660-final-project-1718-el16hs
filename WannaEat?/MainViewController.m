@@ -29,8 +29,8 @@
     _searchbox.delegate=self; //delegate method for the searchbox
     
     //Delete favorites
-//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"favorites"];
-//    [[NSUserDefaults standardUserDefaults] synchronize];
+    //[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"favorites"];
+    //[[NSUserDefaults standardUserDefaults] synchronize];
     
     
 }
@@ -97,7 +97,7 @@
     - (IBAction)search:(id)sender {
         //again here we combine the standard part of the url with the ingredient typed on textbox.
         NSString *strURL = @"http://food2fork.com/api/search?key=6131e7aabf3511307b540284e63641ab&q=";
-        NSString *strsearch = [self.searchbox.text stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
+        NSString *strsearch = [self.searchbox.text stringByReplacingOccurrencesOfString:@" " withString:@"%20"];//for more than 1 ingredients, the latters should be separated by space.
         strURL = [strURL stringByAppendingString:strsearch];
         
         NSLog(@"the resulting url is %@",strURL);//just a nslog to make sure we get the correct url.

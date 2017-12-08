@@ -15,12 +15,14 @@
 @property(weak,nonatomic)IBOutlet UIImageView *image2;
 @property(weak,nonatomic)IBOutlet UILabel *title2;
 -(IBAction)saveme:(id)sender;
+
 //the arrays in which i saved the data of a specific recipe in the table view.
 @property(nonatomic,retain)NSString*fullrecipeid;
 @property(nonatomic,retain)NSString*fullrecipedetails;
 @property(nonatomic,retain)NSString*fullrecipetitle;
 @property(nonatomic,retain)NSString*fullrecipeimage;
 @property(nonatomic,retain)NSString*recipedirections;
+
 @property(nonatomic,retain)NSMutableArray*favoritesLoaded;
 
 @end

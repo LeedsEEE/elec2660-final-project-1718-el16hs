@@ -8,6 +8,7 @@
 
 #import "FullRecipeViewController.h"
 #import "JSON.h"
+
 @interface FullRecipeViewController ()
 
 @end
@@ -24,20 +25,21 @@
     _image2.image=_fullrecipeimage;
   
 }
-
+//here is the code for the save button
 -(IBAction)saveme:(id)sender{
-    NSUserDefaults *defaults5 = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *defaults5 = [NSUserDefaults standardUserDefaults];//I use nsdefaults to save the values for a specific key
     NSMutableArray *favoritesLoaded = [defaults5 objectForKey:@"favorites"];
-    
-    NSData *imageData = UIImageJPEGRepresentation(_fullrecipeimage, 1.0);
+    //we then creare a dictionary in which we include the information for each recipe
+    NSData *imageData = UIImageJPEGRepresentation(_fullrecipeimage, 1.0);//we first need though to pass the data of the image in order to save the image
     
     NSDictionary *fav =@{@"thetitle":_fullrecipetitle,
                          @"theimage":imageData,
                          @"therecipeidd":_recipeidd.text,
-                         @"therecipedetails":_fullrecipedetails
+                         @"therecipedetails":_fullrecipedetails,
+                         @"thedirections":_recipedirections 
                          };
     NSMutableArray *favorites = [NSMutableArray array];
-    NSLog(@"Print Array: \n %@",favorites);
+    
     
     if (favoritesLoaded) {
         favorites = [[NSMutableArray alloc] initWithArray:favoritesLoaded];
@@ -46,10 +48,12 @@
     }
     
     [favorites addObject:fav];
-    
+    //we save the favorites in nsuserdefaults
     [defaults5 setObject:favorites forKey:@"favorites"];
     [defaults5 synchronize];
-    NSLog(@"Print Array: \n %@",favorites);
+   // NSLog(@"Print Array: \n %@",favorites);
+
+    
 }
 
 - (void)didReceiveMemoryWarning {

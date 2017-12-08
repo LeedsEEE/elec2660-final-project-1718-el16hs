@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
     //using the defaults again we can recall the source url so that we browse the method that the recipe is cooked.
     NSUserDefaults *defaults4=[NSUserDefaults standardUserDefaults];
-   self.directions=[defaults4 objectForKey:@"kmethod"];
+    self.directions=[defaults4 objectForKey:@"kmethod"];
     
     self.productURL =self.directions;
   NSURL *url = [NSURL URLWithString:self.productURL];
