@@ -16,6 +16,8 @@
 		3653EDCE1FC5FFDC0065ED9F /* WannaEat_UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3653EDCD1FC5FFDC0065ED9F /* WannaEat_UITests.m */; };
 		365D52061FD803E500D458CA /* MethodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365D52051FD803E500D458CA /* MethodViewController.m */; };
 		365D52091FD8048A00D458CA /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 365D52081FD8047300D458CA /* WebKit.framework */; };
+		365D520F1FD9988600D458CA /* heart@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 365D520E1FD9988000D458CA /* heart@2x.png */; };
+		365D52121FD99D6000D458CA /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 365D52111FD99D6000D458CA /* FavoritesTableViewController.m */; };
 		3661D5921FCC1F8D00DF413C /* FullRecipeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3661D5911FCC1F8D00DF413C /* FullRecipeViewController.m */; };
 		3684E79C1FC7073500F43636 /* energy-food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3684E79B1FC7073500F43636 /* energy-food.jpg */; };
 		3684E7AB1FC70B3F00F43636 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3684E7AA1FC70B3F00F43636 /* MainViewController.m */; };
@@ -68,6 +70,9 @@
 		365D52041FD803E500D458CA /* MethodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MethodViewController.h; sourceTree = "<group>"; };
 		365D52051FD803E500D458CA /* MethodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MethodViewController.m; sourceTree = "<group>"; };
 		365D52081FD8047300D458CA /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		365D520E1FD9988000D458CA /* heart@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "heart@2x.png"; sourceTree = "<group>"; };
+		365D52101FD99D6000D458CA /* FavoritesTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FavoritesTableViewController.h; sourceTree = "<group>"; };
+		365D52111FD99D6000D458CA /* FavoritesTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FavoritesTableViewController.m; sourceTree = "<group>"; };
 		3661D5901FCC1F8D00DF413C /* FullRecipeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FullRecipeViewController.h; sourceTree = "<group>"; };
 		3661D5911FCC1F8D00DF413C /* FullRecipeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FullRecipeViewController.m; sourceTree = "<group>"; };
 		3684E79B1FC7073500F43636 /* energy-food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "energy-food.jpg"; sourceTree = "<group>"; };
@@ -156,6 +161,8 @@
 				3684E7A91FC70B3F00F43636 /* MainViewController.h */,
 				3661D5901FCC1F8D00DF413C /* FullRecipeViewController.h */,
 				3661D5911FCC1F8D00DF413C /* FullRecipeViewController.m */,
+				365D52101FD99D6000D458CA /* FavoritesTableViewController.h */,
+				365D52111FD99D6000D458CA /* FavoritesTableViewController.m */,
 				365D52041FD803E500D458CA /* MethodViewController.h */,
 				365D52051FD803E500D458CA /* MethodViewController.m */,
 				3684E7AA1FC70B3F00F43636 /* MainViewController.m */,
@@ -169,6 +176,7 @@
 				3653EDB81FC5FFDC0065ED9F /* main.m */,
 				3684E79B1FC7073500F43636 /* energy-food.jpg */,
 				3684E81A1FC71C8300F43636 /* restaurant.png */,
+				365D520E1FD9988000D458CA /* heart@2x.png */,
 			);
 			path = "WannaEat?";
 			sourceTree = "<group>";
@@ -337,6 +345,7 @@
 				3684E81B1FC71C8700F43636 /* restaurant.png in Resources */,
 				3684E8251FC74E1500F43636 /* Main.storyboard in Resources */,
 				3653EDB61FC5FFDC0065ED9F /* LaunchScreen.storyboard in Resources */,
+				365D520F1FD9988600D458CA /* heart@2x.png in Resources */,
 				3684E79C1FC7073500F43636 /* energy-food.jpg in Resources */,
 				3653EDB31FC5FFDC0065ED9F /* Assets.xcassets in Resources */,
 			);
@@ -366,6 +375,7 @@
 				3661D5921FCC1F8D00DF413C /* FullRecipeViewController.m in Sources */,
 				3684E7F21FC7102800F43636 /* SBJSON.m in Sources */,
 				3684E7F51FC7102800F43636 /* SBJsonWriter.m in Sources */,
+				365D52121FD99D6000D458CA /* FavoritesTableViewController.m in Sources */,
 				3653EDAE1FC5FFDC0065ED9F /* ViewController.m in Sources */,
 				3684E7AB1FC70B3F00F43636 /* MainViewController.m in Sources */,
 				3684E7F71FC7102800F43636 /* NSObject+SBJSON.m in Sources */,
@@ -533,7 +543,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XWE7GBJWDK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "WannaEat?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "University-of-Leeds.WannaEat-";
@@ -547,7 +557,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XWE7GBJWDK;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "WannaEat?/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "University-of-Leeds.WannaEat-";

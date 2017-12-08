@@ -28,6 +28,10 @@
     self.directions=[[NSMutableArray alloc]init];
     _searchbox.delegate=self; //delegate method for the searchbox
     
+    //Delete favorites
+//    [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"favorites"];
+//    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     
 }
 
@@ -96,7 +100,7 @@
         NSString *strsearch = [self.searchbox.text stringByReplacingOccurrencesOfString:@" " withString:@"%20"];
         strURL = [strURL stringByAppendingString:strsearch];
         
-        NSLog(@"the resulting url is %@",strURL);
+        NSLog(@"the resulting url is %@",strURL);//just a nslog to make sure we get the correct url.
         
         NSError *error;
     

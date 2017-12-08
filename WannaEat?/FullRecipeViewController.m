@@ -25,8 +25,32 @@
   
 }
 
+-(IBAction)saveme:(id)sender{
+    NSUserDefaults *defaults5 = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *favoritesLoaded = [defaults5 objectForKey:@"favorites"];
     
+    NSData *imageData = UIImageJPEGRepresentation(_fullrecipeimage, 1.0);
     
+    NSDictionary *fav =@{@"thetitle":_fullrecipetitle,
+                         @"theimage":imageData,
+                         @"therecipeidd":_recipeidd.text,
+                         @"therecipedetails":_fullrecipedetails
+                         };
+    NSMutableArray *favorites = [NSMutableArray array];
+    NSLog(@"Print Array: \n %@",favorites);
+    
+    if (favoritesLoaded) {
+        favorites = [[NSMutableArray alloc] initWithArray:favoritesLoaded];
+    } else {
+        favorites = [[NSMutableArray alloc] init];
+    }
+    
+    [favorites addObject:fav];
+    
+    [defaults5 setObject:favorites forKey:@"favorites"];
+    [defaults5 synchronize];
+    NSLog(@"Print Array: \n %@",favorites);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
